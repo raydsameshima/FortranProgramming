@@ -4,6 +4,8 @@ Fortran Programming
 From:  
   http://ace.phys.h.kyoto-u.ac.jp/~tomita/education/fortran90/sec1.html#sec1
 
+  http://d.hatena.ne.jp/arakik10/20100203/
+
 # Format
 ## fixed.for
 
