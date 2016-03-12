@@ -1,7 +1,7 @@
 # FortranProgramming
 
-Fortran Programming
-From:
+Fortran Programming  
+From:  
   http://ace.phys.h.kyoto-u.ac.jp/~tomita/education/fortran90/sec1.html#sec1
 
 # Format
@@ -14,12 +14,10 @@ From:
 +--------- C or * for comment  
 
 ## free.f90
-1~132
-; for new line (in the same line)
-! comment
-
-conti& for line continuation, put & at last
-nue 
-
-
+1~132  
+; for new line (in the same line)  
+! comment  
+  
+conti& for line continuation, put & at last  
+nue   
 
