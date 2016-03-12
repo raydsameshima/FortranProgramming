@@ -6,13 +6,12 @@ From:
 
 # Format
 ## fixed.for
-
-1234567~72
-      +-+- body
-     +---- for line continuation symbol
- +---+---- put any symbol to indicate for line continuation
-+---+----- line numbers
-+--------- C or * for comment
+1234567~72  
+      +-+- body  
+     +---- for line continuation symbol  
+ +---+---- put any symbol to indicate for line continuation  
++---+----- line numbers  
++--------- C or * for comment  
 
 ## free.f90
 1~132
