@@ -26,3 +26,7 @@ From:
     conti& ! for line continuation, put & at last  
     nue   
 
+## names.f90
+    
+    number of letters <= 31
+
