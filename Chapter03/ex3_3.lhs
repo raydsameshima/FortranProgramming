@@ -8,7 +8,9 @@ ex3_3.lhs
 >     then putStrLn "leap year"
 >     else putStrLn "common year"
 
-> isLeap :: Integral a => a -> Bool
+> isLeap 
+>   :: Integral a =>
+>      a -> Bool
 > isLeap n
 >   | n `mod` 400 == 0 = True
 >   | n `mod` 100 == 0 = False 
