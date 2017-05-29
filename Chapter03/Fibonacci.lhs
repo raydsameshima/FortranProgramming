@@ -1,12 +1,13 @@
-Test.lhs
+Fibonacci.lhs
 
-> module Test where
+> module Fibonacci where
 > import Control.Monad.State
 > -- State s t = s -> (t,s)
 > 
 > type FibState 
 >   = ( Int, Integer, Integer ) -- (i, fib (i-1), fib (i-2))
 >      
+> -- Memomized Fibonacci sequence
 > fib :: Int -> Integer
 > fib 0 = 0
 > fib 1 = 1
@@ -21,6 +22,7 @@ Test.lhs
 >         do put (i+1, f1+f2, f1)
 >            fib'
 >
+> -- O(2^n)
 > fibSlow :: Int -> Integer
 > fibSlow 0 = 0
 > fibSlow 1 = 1
