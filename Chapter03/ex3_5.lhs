@@ -1,6 +1,7 @@
 ex3_5.lhs
 
 > import Control.Monad.State
+> -- State s t = s -> (t,s)
 >
 > data Grade = A | B | C | F | O
 >   deriving (Show, Eq)
@@ -29,7 +30,11 @@ ex3_5.lhs
 > add C (ABCF a b c f) = ABCF a     b     (c+1) f
 > add F (ABCF a b c f) = ABCF a     b     c     (f+1)
 > add O k              = k
->        
+
+Experiments
+The basic flow is the following:
+
+> call :: IO ()
 > call = do
 >   putStrLn "GRADING: "
 >   a <- getLine
@@ -38,9 +43,16 @@ ex3_5.lhs
 >   if g == O 
 >     then do
 >       print O
->       return $ add g
 >     else
 >       do
 >         print g
 >         call
 >
+> update :: Int -> (Grade, ABCF) -> (Grade, ABCF)
+> update n state = let g = isIn100 n in
+>   case g of
+>     O -> state
+>     _ -> (g, add g . snd $ state)
+   
+
+
