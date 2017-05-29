@@ -2,20 +2,17 @@ Test.lhs
 
 > module Test where
 > import Control.Monad.State
-> import Control.Monad.Writer
+> -- State s t = s -> (t,s)
 > 
 > type FibState 
->   = ( Int     -- i
->     , Integer -- fib(i-1)
->     , Integer -- fib(i-2)
->     )
+>   = ( Int, Integer, Integer ) -- (i, fib (i-1), fib (i-2))
 >      
 > fib :: Int -> Integer
 > fib 0 = 0
 > fib 1 = 1
 > fib n = evalState fib' (2,1,0)
 >   where
->     fib' :: State FibState Integer
+>     fib' :: State FibState Integer -- FibState -> (Integer, FibState)
 >     fib' = do
 >       (i, f1, f2) <- get
 >       if i == n then 
@@ -39,3 +36,4 @@ Test.lhs
     --
   (1.10 secs, 536,284,712 bytes)
 
+ 
