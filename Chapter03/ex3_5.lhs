@@ -53,6 +53,16 @@ The basic flow is the following:
 >   case g of
 >     O -> state
 >     _ -> (g, add g . snd $ state)
-   
 
+  *Main> let update' n = update n (isIn100 n, zero)
+  *Main> update' 59
+  (F,ABCF {numA = 0, numB = 0, numC = 0, numF = 1})
+  *Main> update 69 it
+  (C,ABCF {numA = 0, numB = 0, numC = 1, numF = 1})
+  *Main> update 79 it
+  (B,ABCF {numA = 0, numB = 1, numC = 1, numF = 1})
+  *Main> update 89 it
+  (A,ABCF {numA = 1, numB = 1, numC = 1, numF = 1})
+  *Main> update 99 it
+  (A,ABCF {numA = 2, numB = 1, numC = 1, numF = 1})
 
