@@ -30,3 +30,19 @@ From:
     
     number of letters <= 31
 
+## print option
+
+### From ex5_3.f90
+    print *, "string"
+          +- default setting
+    print "(1X, I3, 2X, 3F10.5)", ..      
+                        +- 10 letters for each 3 floating numbers with 10^(-5) accuracy
+                    +----- 2 spaces
+                +--------- 3 letters for integers 
+            +------------- 1 space at the top
+
+### From ex5_4.f90
+    print "(A,$)"
+              +- no new line
+            +--- charactors with its length. (If we put number, e.q., A3 means 3 letter-width.)
+
