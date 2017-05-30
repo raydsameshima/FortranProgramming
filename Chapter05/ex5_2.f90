@@ -9,7 +9,7 @@ var2:   Do n = 1,9
           Read *, mn
           If(mn == m*n) Then
             Print *, "ok"
-          Else
+          Else 
             Print *, "wrong"
           END If
         END DO var2
