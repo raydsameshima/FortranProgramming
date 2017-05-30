@@ -8,7 +8,7 @@ PROGRAM MeanAndSigma
     Print "(A,$)", "Input a grade(Integer, quit for a negative number): "
     Read *, mark
       If(mark < 0) EXIT
-    n = n + 1; w = w + mark; v = v + mark**2
+    n = n + 1; w = w + mark; v = v + mark**2 ! v becomes a sum of squares.
   END DO
 
   If(n > 0) Then
