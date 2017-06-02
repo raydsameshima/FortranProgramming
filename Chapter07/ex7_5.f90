@@ -5,12 +5,12 @@ PROGRAM alphabet_counting
   INTEGER :: freq(0:27)=0, code(255)=0, i, ichi
   LOGICAL :: mask(0:27)
   abc=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-  
+!      1 here is a space  
   DO ichi=1, 53
     IF(ichi <= 27) THEN
-      code(ICHAR(abc(ichi:ichi)))=ichi
+      code(ICHAR(abc(ichi:ichi)))=ichi    ! capital letters
     ELSE
-      code(ICHAR(abc(ichi:ichi)))=ichi-26
+      code(ICHAR(abc(ichi:ichi)))=ichi-26 ! small leters
     END IF  
   END DO
 
@@ -20,7 +20,7 @@ PROGRAM alphabet_counting
     IF(input == "") EXIT
     DO i=1, LEN_TRIM(input)
       ichi = code(ICHAR(input(i:i)))
-      freq(ichi)=freq(ichi)+1
+      freq(ichi) = freq(ichi) + 1
     END DO
   END DO
 
@@ -28,7 +28,7 @@ PROGRAM alphabet_counting
   mask = (freq>0)
 
   DO WHILE(COUNT(mask)>0)
-    ichi = SUM(MAXLOC(freq, mask))-1
+    ichi = SUM(MAXLOC(freq, mask)) - 1
     PRINT '(4X, A1, ":" I5)', abc(ichi:ichi), freq(ichi)
     mask(ichi) = .FALSE. 
   END DO
@@ -36,3 +36,12 @@ PROGRAM alphabet_counting
   PRINT '("Total=", I5)', SUM(freq)
 
 END PROGRAM alphabet_counting
+!
+! MAXLOC returns 1 component vector even if it takes 1d array.
+! To convert it to scalar, use SUM.
+! The return value is the relative index (1,2,3 ..) from the head.
+! E.g.,
+!   a(0:3) = /(1,4,3,0)/
+!   MAXLOC(a) = (/2/)
+!     => a(SUM(MAXLOC(a))) = a(2) = 3
+!
