@@ -16,6 +16,7 @@ PROGRAM Matrix
 
   PRINT *, "Input elements of A in a matrix form:"
   READ *, ((a(i,j), j=1, n), i=1, m)
+  PRINT *, "SHAPE function gives us the size of A; SHAPE(a)= ", SHAPE(a)
   PRINT *, "A =" 
   DO i=1, m
     PRINT "(10I5)", (a(i,j), j=1, n)
