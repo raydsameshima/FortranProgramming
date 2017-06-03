@@ -35,4 +35,11 @@ SUBROUTINE count(n)
   END DO
   n=sum
 END SUBROUTINE count
-
+! 
+! $ ./initialize.out 
+!  Using bad_count, the second call returns wrong result.
+!           55
+!          110
+!  The difference is the initialization position.
+!           55
+!           55
