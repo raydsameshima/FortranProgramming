@@ -47,6 +47,13 @@ From:
             +--- charactors with its length. (If we put number, e.q., A3 means 3 letter-width.)
 
 ## IO
-    OPEN
-    WRITE
-    CLOSE
+
+### WRITE
+    OPEN(8, FILE="file_name.out")
+                  +- a string as a file name
+         +---------- (5,6) for standard console (In, Out)
+    WRITE(8) contents
+             +------ some data
+    CLOSE(8)
+
+### READ
