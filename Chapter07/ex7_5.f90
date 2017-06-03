@@ -1,7 +1,9 @@
 ! ex7_5.f90
 ! counting alphabet
 PROGRAM alphabet_counting
-  CHARACTER :: abc*53, input*80
+! CHARACTER :: abc*53, input*80
+  CHARACTER(LEN=53) :: abc
+  CHARACTER(LEN=80) :: input
   INTEGER :: freq(0:27)=0, code(255)=0, i, ichi
   LOGICAL :: mask(0:27)
   abc=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
