@@ -29,6 +29,7 @@ PROGRAM alphabet_counting
 
   DO WHILE(COUNT(mask)>0)
     ichi = SUM(MAXLOC(freq, mask)) - 1
+!              1 MAXLOC returns a one-element array
     PRINT '(4X, A1, ":" I5)', abc(ichi:ichi), freq(ichi)
     mask(ichi) = .FALSE. 
   END DO
