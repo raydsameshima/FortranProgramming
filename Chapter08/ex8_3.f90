@@ -18,7 +18,7 @@ FUNCTION hex(n)
                                   '8','9','A','B','C','D','E','F'/)
   INTEGER :: n,j,nn
 
-  hex = " " ! Return value is given by its name
+  hex = " " ! Initialization, return value is given by its name
 
   DO j=8, 1, -1
     nn = n/16
