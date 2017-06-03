@@ -46,3 +46,7 @@ From:
               +- no new line
             +--- charactors with its length. (If we put number, e.q., A3 means 3 letter-width.)
 
+## IO
+    OPEN
+    WRITE
+    CLOSE
