@@ -32,12 +32,13 @@ ex3_5.lhs
 >   putStrLn "Put a grade here:"
 >   x <- getLine
 >   let o = isIn100 (read x)
->   if o == O then do
+>   if o == O then
 >     print abcf
 >   else do
 >     print o
 >     grade (add o abcf)
 >
+> main :: IO ()
 > main = grade zero
 
   $ runghc ex3_5.lhs
