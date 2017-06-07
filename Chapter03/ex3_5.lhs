@@ -66,14 +66,13 @@ The basic flow is the following:
   *Main> update 99 it
   (A,ABCF {numA = 2, numB = 1, numC = 1, numF = 1})
 
-> grade :: ABCF -> IO ABCF
 > grade abcf = do
 >   putStrLn "Put a grade here:"
 >   x <- getLine
 >   let n = read x :: Int
 >   let o = isIn100 n
 >   if o == O then do
->     return abcf
+>     print abcf
 >   else do
 >     print o
 >     grade (add o abcf)
