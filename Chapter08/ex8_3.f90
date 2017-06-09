@@ -14,9 +14,10 @@ END PROGRAM main
 
 FUNCTION hex(n)
   CHARACTER(LEN=8) :: hex ! The type of function
+  INTEGER, INTENT(INOUT) :: n
   CHARACTER(LEN=1) :: h(0:15) = (/'0','1','2','3','4','5','6','7', &
                                   '8','9','A','B','C','D','E','F'/)
-  INTEGER :: n,j,nn
+  INTEGER :: j, nn
 
   hex = " " ! Initialization, return value is given by its name
 
