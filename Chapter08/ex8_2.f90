@@ -7,9 +7,11 @@ PROGRAM histogram
 
 ! raw data: the number of students in 0-100 range by 10 pts.
     nn = (/1,5,12,22,28,35,48,28,10,3/)
-! out put format
+! output format
     fmt ="(1X, I2, '-', I2, 1X, A50)"
   
+  PRINT "(A, 10I3)", "The raw data is", nn
+
   DO j=0,9
     CALL str( nn(j), cn)
     PRINT fmt, 10*j, 10*j+9, cn
