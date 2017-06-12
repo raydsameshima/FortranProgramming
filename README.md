@@ -6,6 +6,8 @@ From:
 
   http://d.hatena.ne.jp/arakik10/20100203/
 
+  http://jjoo.sakura.ne.jp/tips/f90/index.html
+
 # Format
 ## fixed.for
 
