@@ -1,6 +1,6 @@
 ex3_5.lhs
 
-> -- import Control.Monad.State
+> import Control.Monad.State
 > -- State s t = s -> (t,s)
 >
 > data Grade = A | B | C | F | O
@@ -60,3 +60,19 @@ ex3_5.lhs
   Put a grade here:
   101
   ABCF {numA = 2, numB = 1, numC = 1, numF = 1}
+
+> doWhile :: (a -> a) -> (a -> Bool) -> a -> a
+> doWhile f p a
+>   | p (f a)   = doWhile f p (f a)
+>   | otherwise = f a
+>
+> doWhileM 
+>   :: (Monad m) => 
+>      (a -> m a) -> (a -> Bool) -> a -> m a
+> doWhileM = undefined
+
+> -- State s t = s -> (t,s)
+> add' :: Grade -> ABCF -> (ABCF, Grade)
+> add' g a = (add g a, g)
+>
+> 
