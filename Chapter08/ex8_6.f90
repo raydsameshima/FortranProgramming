@@ -30,7 +30,7 @@ FUNCTION trace(x) RESULT(tr)
   IF (n1 /= n2) THEN
     PRINT*, "It must be a square matrix."
   ELSE
-    tr = 0.0
+    tr = 0.0           ! initialize
     DO i = 1, n1
       tr = tr + x(i,i)
     END DO
