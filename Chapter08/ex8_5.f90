@@ -5,7 +5,7 @@ SUBROUTINE choice(kk,n1,n2)
   INTEGER, INTENT(OUT) :: kk(n1)
   INTEGER :: i,ir,j
   REAL :: k
-  kk = (/ (i, i=1, n1) /) ! 1D array, not determined yet
+  kk = (/ (i, i=1, n1) /) ! 1D array [1 .. n1]
 
   PRINT*, "Put a seed for random numbers (the bigger, the better): "
   READ*, ir
@@ -35,7 +35,7 @@ SUBROUTINE ran(i,r)
 END SUBROUTINE ran
  
 PROGRAM main
-  INTEGER, ALLOCATABLE :: number(:) ! 1D array
+  INTEGER, ALLOCATABLE :: number(:) ! 1D array, not determined yet
   INTEGER :: n,m,i
 
   PRINT*, "How many applicants?"
@@ -43,11 +43,10 @@ PROGRAM main
   PRINT*, "How many elected?"
   READ*, m
   ALLOCATE( number(n) )
-  CALL choice(number,n,m)
+  CALL choice(number,n,m) ! insie choice, the array number is determined 
 
   PRINT*," rank    #"
   DO i=1, MIN(n,m)
     PRINT "(2X, I4, I8)", i, number(i)
   END DO
 END PROGRAM main
-
