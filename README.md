@@ -32,9 +32,9 @@ From:
     
     number of letters <= 31
 
-## print option
-
-### From ex5_3.f90
+## IO
+### PRINT
+#### From ex5_3.f90
     print *, "string"
           +- default setting
     print "(1X, I3, 2X, 3F10.5)", ..      
@@ -43,12 +43,11 @@ From:
                 +--------- 3 letters for integers 
             +------------- 1 space at the top
 
-### From ex5_4.f90
+#### From ex5_4.f90
     print "(A,$)"
               +- no new line
             +--- charactors with its length. (If we put number, e.q., A3 means 3 letter-width.)
 
-## IO
 
 ### WRITE
     OPEN(8, FILE="file_name.out")
@@ -58,4 +57,12 @@ From:
              +------ some data
     CLOSE(8)
 
+    WRITE(*,*) is the same as PRINT*
+
+#### From ex8_10
+    WRITE(*, '(A)', ADVANCE='no') "Case? "
+                    +- No new line
+             +-------- Character variable:
+          +----------- Standard IO (console)   
+    
 ### READ
