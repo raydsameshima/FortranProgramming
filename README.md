@@ -32,6 +32,13 @@ From:
     
     number of letters <= 31
 
+## coding_style.f90
+    
+    http://www.mri-jma.go.jp/Project/mrinpd/coderule.html
+    
+    Especially, put "implicit none" statement top level.
+    If the program has "use", then put just before this.
+
 ## IO
 ### PRINT
 #### From ex5_3.f90
