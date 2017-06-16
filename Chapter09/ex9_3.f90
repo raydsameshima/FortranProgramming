@@ -1,8 +1,8 @@
 ! ex9_3.f90
-! pointer
+! pointer; wiondow of 2d array
 PROGRAM main
   INTEGER, POINTER :: window(:,:)
-  INTEGER, TARGET :: mat(1:8, 1:8)
+  INTEGER, TARGET  :: mat(1:8, 1:8)
   INTEGER :: i,j,m,n,k
   mat = RESHAPE( (/ (i, i=1, 64) /), SHAPE(mat) )
 
