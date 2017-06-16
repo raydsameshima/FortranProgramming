@@ -1,5 +1,5 @@
 ! ex9_2.f90
-! grading
+! grading, with output file
 PROGRAM main
   IMPLICIT NONE
   TYPE grade_components
@@ -10,10 +10,15 @@ PROGRAM main
   INTEGER :: n,i
   CHARACTER(LEN=1) :: answer
   TYPE(grade_components) :: s5
+  CHARACTER(LEN=40) :: file_name
 
+  i=0
+  PRINT*, "Put the file name to store the grading (up to 40 char):"
+  READ "(A)", file_name ! once put "(A)", we do not need use ""
   PRINT*, "How many students?"
   READ*, n
-  OPEN(8, FILE = "h3.txt")
+! OPEN(8, FILE = "h3.txt")
+  OPEN(8, FILE = TRIM(file_name)) ! to cut spaces
     DO WHILE (i<n)
       PRINT*, "Student's name:"
       READ "(A)", s5%name
