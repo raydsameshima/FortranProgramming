@@ -11,10 +11,12 @@ PROGRAM main
   READ*, a
   PRINT*, "Input 3 components of the second vector:"
   READ*, b
+  PRINT*, "To access each component, use a%x."
+  PRINT '(A, F6.3)', " a%x = ", a%x
   s = a%x * b%x + a%y * b%y + a%z * b%z
   PRINT "(' a.b = ', F6.3 )", s
   c = vector_product(a,b)
-  PRINT "(' a^b = ', F6.3, ',', F6.3, ',', F6.3, ')' )", c
+  PRINT "( ' a^b = ', F6.3, ',', F6.3, ',', F6.3 )", c
 
 CONTAINS
   FUNCTION vector_product(u,v) RESULT(w)
