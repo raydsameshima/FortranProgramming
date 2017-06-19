@@ -76,8 +76,8 @@ From:
 
 ### Redirection
 
-$ cat ex2_12.f90 
-! ex2_12.f90
+$ cat redirect_12.f90 
+! redirect.f90
 program main
   implicit none
   integer :: i,j,k,l
