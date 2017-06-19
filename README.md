@@ -74,6 +74,33 @@ From:
     
 ### READ
 
+### Redirection
+
+$ cat ex2_12.f90 
+! ex2_12.f90
+program main
+  implicit none
+  integer :: i,j,k,l
+
+  read(*,*) i
+  read(*,*) j,k
+  read(*,*) l
+
+  write(*,*) "i=",i, "j=",j, "k=",k, "l=",l
+end program main
+
+$ cat data.txt 
+1, 2
+3
+4, 5
+6, 7
+$ ./a.out < data.txt 
+ i=           1 j=           3 k=           4 l=           6
+
+$ ./a.out < data.txt > out.txt
+$ cat out.txt 
+ i=           1 j=           3 k=           4 l=           6
+
 # Note
 ## Division (/)
 
