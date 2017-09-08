@@ -114,7 +114,9 @@ $ cat out.txt
 # Note
 ## Division (/)
 
+```text
 Use 
   (/) :: REAL -> REAL -> REAL
 E.g.,
   1.5 * 4.0 / 3.0 (NG : 1.5 * 4 / 3)  
+```
