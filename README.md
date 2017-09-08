@@ -8,6 +8,8 @@ From:
 
   http://jjoo.sakura.ne.jp/tips/f90/index.html
 
+  http://web.agr.ehime-u.ac.jp/~kishou/Lecture/atmosphere/atmo06.htm
+
 # Format
 ## fixed.for
 
@@ -77,6 +79,7 @@ From:
 ### Redirection
 
 $ cat redirect_12.f90 
+'''fortran
 ! redirect.f90
 program main
   implicit none
@@ -88,6 +91,7 @@ program main
 
   write(*,*) "i=",i, "j=",j, "k=",k, "l=",l
 end program main
+'''
 
 $ cat data.txt 
 1, 2
