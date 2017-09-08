@@ -95,16 +95,21 @@ end program main
 ```
 
 $ cat data.txt 
+```text
 1, 2
 3
 4, 5
 6, 7
+```
 $ ./a.out < data.txt 
+```text
  i=           1 j=           3 k=           4 l=           6
-
+```
 $ ./a.out < data.txt > out.txt
 $ cat out.txt 
+```text
  i=           1 j=           3 k=           4 l=           6
+```
 
 # Note
 ## Division (/)
