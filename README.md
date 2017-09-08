@@ -79,7 +79,8 @@ From:
 ### Redirection
 
 $ cat redirect_12.f90 
-'''fortran
+
+```fortran
 ! redirect.f90
 program main
   implicit none
@@ -91,7 +92,7 @@ program main
 
   write(*,*) "i=",i, "j=",j, "k=",k, "l=",l
 end program main
-'''
+```
 
 $ cat data.txt 
 1, 2
